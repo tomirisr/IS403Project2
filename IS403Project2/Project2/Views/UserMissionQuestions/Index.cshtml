@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Project2.Models.UserMissionQuestion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionPresident)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionCountry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DominantReligion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MissionClimate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ansswer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionPresident)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionCountry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DominantReligion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MissionClimate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ansswer)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MissionQuestionID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MissionQuestionID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MissionQuestionID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,88 @@
+﻿@model Project2.Models.Mission
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mission</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionPresident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionPresident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DominantReligion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DominantReligion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flag)
+        </dt>
+
+        <dd>
+            <img height="300" src="~/Content/images/@Html.DisplayFor(model => model.Flag)" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionClimate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionClimate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionLanguage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MissionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

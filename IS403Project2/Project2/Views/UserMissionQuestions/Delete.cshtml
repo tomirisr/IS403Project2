@@ -1,0 +1,160 @@
+﻿@model Project2.Models.UserMissionQuestion
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UserMissionQuestion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionPresident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionPresident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DominantReligion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DominantReligion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Flag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Flag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MissionClimate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MissionClimate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Question)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Question)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ansswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ansswer)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
