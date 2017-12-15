@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Project2.Models.UserMissionQuestion>
+
+@{
+    ViewBag.Title = "QuestionPage";
+}
+
+@{
+    int iCount = 0;
+    foreach (var item in Model)
+    {
+        iCount = iCount + 1;
+        if (iCount == 1)
+        {
+            <ul class="breadcrumb">
+                <li> @Html.ActionLink("Home", "Index", "Home")</li>
+                <li> @Html.ActionLink("Missions", "Selection", "Missions")</li>
+                <li> @Html.ActionLink(item.MissionName, "MissionFAQ", "MissionQuestions",new { id = item.MissionID },null)</li>
+                <li> @Html.ActionLink(item.MissionName + " FAQ's","QuestionPage","UserMissionQuestions", new { id = item.MissionID },null) </li>
+            </ul>
+            <h2>Frequently Asked Questions for the @item.MissionName Mission</h2>
+            <br />
+            @Html.ActionLink("Submit New Question", "Create", "MissionQuestions", new { MissionID = item.MissionID }, new { @class="btn btn-primary" })
+        }
+    }
+
+ }
+@foreach (var item in Model)
+{
+    <br />
+    <br />
+    <div class="col-md-6">
+        <hr />
+        <h3>Question</h3>
+       
+        @Html.DisplayFor(modelItem => item.Question)
+    </div>
+        
+    <div class="col-md-6">
+        <hr />
+        <h3>Answer</h3>
+        @Html.DisplayFor(modelItem => item.Ansswer)
+        <br />
+        <br />
+        <div>
+            @Html.ActionLink("Submit New Answer", "Edit", "MissionQuestions", new { id = item.MissionQuestionID }, new { @class = "btn btn-default btn-sm" })
+        </div>
+    </div>
+
+
+}

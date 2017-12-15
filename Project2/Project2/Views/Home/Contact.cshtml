@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Contact Us";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    One Eternal Round<br />
+    Kolob, KB 56562<br />
+    <abbr title="Phone">P:</abbr>
+    443.865.6562
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:kolob@hietokolob.com">kolob@hietokolob.com</a><br />
+</address>
+
+<div class="row">
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="usr">Name</label>
+            <input type="text" class="form-control" id="usr" placeholder="Enter name" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email address" />
+        </div>
+        <div class="list-group" id="list-tab" role="tablist">
+            <a href="#" class="list-group-item">Subject 1</a>
+            <a href="#" class="list-group-item">Subject 2</a>
+            <a href="#" class="list-group-item">Subject 3</a>
+        </div>
+        <div class="form-group">
+            <label for="comment">Message</label>
+            <textarea class="form-control" id="comment" rows="5"></textarea>
+        </div>
+        <a href="~/Home/Contact" class="btn btn-primary" role="button">Submit</a>
+    </div>
+</div>
