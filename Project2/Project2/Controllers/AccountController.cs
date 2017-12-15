@@ -15,6 +15,7 @@ namespace Project2.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        //this part of code takes care of the third party Authentication
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 

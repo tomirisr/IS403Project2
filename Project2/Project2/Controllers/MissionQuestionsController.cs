@@ -16,7 +16,7 @@ namespace Project2.Controllers
     {
         private AzureContext db = new AzureContext();
 
-        // GET: MissionQuestions
+        // MissionQuestions default view
         public ActionResult Index()
         {
             return View(db.MissionQuestions.ToList());

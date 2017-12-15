@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project2.Models
 {
+    //webUser table data 
     [Table("WebUser")]
     public class User
     {

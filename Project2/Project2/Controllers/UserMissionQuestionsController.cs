@@ -14,6 +14,7 @@ namespace Project2.Controllers
     [Authorize]
     public class UserMissionQuestionsController : Controller
     {
+        //this controller takes care of the user questions submitted to the website
         private AzureContext db = new AzureContext();
 
         // GET: UserMissionQuestions
@@ -127,7 +128,7 @@ namespace Project2.Controllers
         }
         public ActionResult QuestionPage(int id)
         {
-
+            //thwe quesry below will return all the data from all three tables and the we will choose which ones we want to show in our view
             IEnumerable<UserMissionQuestion> JoinedTable = db.Database.SqlQuery<UserMissionQuestion>(
                @" SELECT *
 FROM Mission INNER JOIN MissionQuestion

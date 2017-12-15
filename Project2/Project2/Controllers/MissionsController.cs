@@ -13,6 +13,7 @@ namespace Project2.Controllers
 {
     public class MissionsController : Controller
     {
+        //using Azure we created a database to store information about missions and FAQs
         private AzureContext db = new AzureContext();
 
         // GET: Missions
@@ -125,6 +126,7 @@ namespace Project2.Controllers
             base.Dispose(disposing);
         }
        
+        //this method takes the user to the Mission Selection view
         public ActionResult Selection()
         {
             ViewBag.Mission = db.Missions.ToList();

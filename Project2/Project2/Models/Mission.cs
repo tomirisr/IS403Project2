@@ -7,6 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project2.Models
 {
+    //pulling data from the mission table
     [Table("Mission")]
     public class Mission
     {

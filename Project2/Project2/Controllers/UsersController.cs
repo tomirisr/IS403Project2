@@ -13,6 +13,7 @@ namespace Project2.Controllers
 {
     public class UsersController : Controller
     {
+        //this controller takes care of all the methods related to user information
         private AzureContext db = new AzureContext();
 
         // GET: Users

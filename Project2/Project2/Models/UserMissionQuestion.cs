@@ -9,6 +9,7 @@ namespace Project2.Models
 {
     public class UserMissionQuestion
     {
+        //the attributes from three tables combined into one class to be able to access all the needed data with a query statement
     
         public int MissionID { get; set; }
         [Display(Name ="Mission Name")]
